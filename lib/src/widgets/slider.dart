@@ -55,10 +55,10 @@ class CreateSlider extends StatefulWidget {
   });
 
   @override
-  State<CreateSlider> createState() => _UiSliderState();
+  State<CreateSlider> createState() => CreateSliderState();
 }
 
-class _UiSliderState extends State<CreateSlider> {
+class CreateSliderState extends State<CreateSlider> {
   late double _currentValue;
 
   @override
