@@ -72,6 +72,10 @@ class CreateSliderState extends State<CreateSlider> {
     return value.toInt().toString();
   }
 
+  int getValue() {
+    return _currentValue.toInt();
+  }
+
   @override
   Widget build(BuildContext context) {
     final bgColor = widget.backgroundColor ?? Colors.grey.shade200;
