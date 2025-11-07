@@ -14,7 +14,9 @@ class FluiConfirmDialog extends BaseDialog {
     BuildContext context, {
     required String title,
     required String content,
-    Function()? onPressed,
+    Function()? onConfirmed,
+    String? confirmText,
+    String? cancelText,
   }) {
     return BaseDialog.show<T>(
       context,
@@ -23,15 +25,15 @@ class FluiConfirmDialog extends BaseDialog {
       actions: [
         FluiTextButton(
           onPressed: () {
-            if (onPressed != null) onPressed();
+            if (onConfirmed != null) onConfirmed();
 
             Navigator.of(context).pop(true);
           },
-          text: 'Yes',
+          text: confirmText ?? 'Yes',
         ),
         FluiTextButton(
           onPressed: () => Navigator.of(context).pop(false),
-          text: 'No',
+          text: cancelText ?? 'No',
           isOutlinedButton: true,
         ),
       ],
