@@ -1,39 +1,163 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# 🎨 FluiKit
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+**Flutter UI Kit** - A comprehensive component library for Flutter applications.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+A collection of reusable Flutter components designed to accelerate your development workflow.
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+---
 
-## Features
+## ✨ Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- 🎯 **Essential UI Components** - Buttons, dropdowns, inputs, and more
+- ⚡ **Optimized Performance** - Lightweight and efficient
+- 🔧 **Easy Integration** - Simple setup and intuitive API
+---
 
-## Getting started
+## 📦 Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add FluiKit to your `pubspec.yaml`:
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  fluikit:
+    git:
+      url: https://github.com/RaulCatalinas/Fluikit.git
+      ref: main
 ```
 
-## Additional information
+## 🚀 Quick Start
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+### 1. Import FluiKit
+
+```dart
+import 'package:fluikit/widgets.dart';
+import 'package:fluikit/dialogs.dart';
+```
+
+### 2. Use Components
+
+```dart
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: FluiAppBar(actions: [Text('FluiKit Demo')]),
+      body: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            FluiReadOnlyInput(
+                placeholder: "Directory to save the download"
+            )
+            SizedBox(height: 16),
+            FluiButton(
+              onPressed: () {
+                FluiAlertDialog.show(
+                  context,
+                  title: 'Hello!',
+                  content: 'Welcome to FluiKit',
+                );
+              },
+              child: FluiText('Show Alert'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+
+## 🌟 Examples
+
+### Complete Form Example
+
+```dart
+class LoginForm extends StatefulWidget {
+  @override
+  _LoginFormState createState() => _LoginFormState();
+}
+
+class _LoginFormState extends State<LoginForm> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: Padding(
+        padding: EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            FluiText(text: 'Login', fontSize: 20),
+            SizedBox(height: 24),
+            FluiInput(
+              placeholder: 'your@email.com',
+            ),
+            SizedBox(height: 16),
+            FluiInput(
+              placeholder: 'Password',
+            ),
+            SizedBox(height: 24),
+            FluiButton(
+              onPressed: _handleLogin,
+              child: FluiText('Sign In'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Future<void> _handleLogin() async {
+    print('Signing in...');
+    
+    // Simulate API call
+    await Future.delayed(Duration(seconds: 2));
+    
+    FluiSuccessDialog.show(
+      context,
+      title: 'Welcome!',
+      content: 'You have successfully signed in',
+    );
+  }
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+}
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! This is a personal project, but feel free to:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📬 Contact
+
+For questions, suggestions, or feedback:
+
+- GitHub: [Raul Catalinas](https://github.com/RaulCatalinas)
+- Email: raulcatalinas@gmail.com
+
+---
+
+Made with ❤️ for Flutter developers
