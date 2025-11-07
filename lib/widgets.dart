@@ -1,4 +1,5 @@
 export 'src/widgets/app_bar.dart';
+export 'src/widgets/checkbox.dart';
 export 'src/widgets/drawer.dart';
 export 'src/widgets/dropdown.dart';
 export 'src/widgets/icon_button.dart';
