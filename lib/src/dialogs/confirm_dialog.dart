@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart' show BuildContext, Navigator;
 
-import '../widgets/text_button.dart' show CreateTextButton;
+import '../widgets/text_button.dart' show FluiTextButton;
 import 'base_dialog.dart' show BaseDialog;
 
-class ConfirmDialog extends BaseDialog {
-  const ConfirmDialog({
+class FluiConfirmDialog extends BaseDialog {
+  const FluiConfirmDialog({
     super.key,
     required super.actions,
     required super.title,
@@ -21,7 +21,7 @@ class ConfirmDialog extends BaseDialog {
       title: title,
       content: content,
       actions: [
-        CreateTextButton(
+        FluiTextButton(
           onPressed: () {
             if (onPressed != null) onPressed();
 
@@ -29,7 +29,7 @@ class ConfirmDialog extends BaseDialog {
           },
           text: 'Yes',
         ),
-        CreateTextButton(
+        FluiTextButton(
           onPressed: () => Navigator.of(context).pop(false),
           text: 'No',
           isOutlinedButton: true,

@@ -8,13 +8,13 @@ import 'package:flutter/material.dart'
         StatefulWidget,
         Widget;
 
-class CreateDropdown<T> extends StatefulWidget {
+class FluiDropdown<T> extends StatefulWidget {
   final List<DropdownMenuEntry<dynamic>> dropdownMenuEntries;
   final void Function(T?)? onSelected;
   final bool? initiallyVisible;
   final String? placeHolder;
 
-  const CreateDropdown({
+  const FluiDropdown({
     super.key,
     this.initiallyVisible,
     this.placeHolder,
@@ -23,10 +23,10 @@ class CreateDropdown<T> extends StatefulWidget {
   });
 
   @override
-  State<CreateDropdown> createState() => CreateDropdownState();
+  State<FluiDropdown> createState() => FluiDropdownState();
 }
 
-class CreateDropdownState extends State<CreateDropdown> {
+class FluiDropdownState extends State<FluiDropdown> {
   late bool isVisible;
 
   @override

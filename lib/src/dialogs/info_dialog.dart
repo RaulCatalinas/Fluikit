@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart' show BuildContext, Navigator;
 
-import '../widgets/text_button.dart' show CreateTextButton;
+import '../widgets/text_button.dart' show FluiTextButton;
 import 'base_dialog.dart' show BaseDialog;
 
-class InfoDialog extends BaseDialog {
-  const InfoDialog({
+class FluiInfoDialog extends BaseDialog {
+  const FluiInfoDialog({
     super.key,
     required super.actions,
     required super.title,
@@ -22,7 +22,7 @@ class InfoDialog extends BaseDialog {
       title: title,
       content: content,
       actions: [
-        CreateTextButton(
+        FluiTextButton(
           text: 'Ok',
           onPressed: () {
             if (onPressed != null) onPressed();

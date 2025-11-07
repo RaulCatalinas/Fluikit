@@ -8,12 +8,12 @@ import 'package:flutter/material.dart'
         TextStyle,
         Widget;
 
-class CreateText extends StatelessWidget {
+class FluiText extends StatelessWidget {
   final String text;
   final double? fontSize;
   final Color? color;
 
-  const CreateText({super.key, required this.text, this.fontSize, this.color});
+  const FluiText({super.key, required this.text, this.fontSize, this.color});
 
   @override
   Widget build(BuildContext context) {

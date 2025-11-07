@@ -9,10 +9,10 @@ import 'package:flutter/material.dart'
         Widget,
         kToolbarHeight;
 
-class CreateAppBar extends StatelessWidget implements PreferredSizeWidget {
+class FluiAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget> actions;
 
-  const CreateAppBar({super.key, required this.actions});
+  const FluiAppBar({super.key, required this.actions});
 
   @override
   Widget build(BuildContext context) {

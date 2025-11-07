@@ -14,16 +14,16 @@ import 'package:flutter/material.dart'
         Widget,
         TextAlignVertical;
 
-class CreateReadOnlyInput extends StatefulWidget {
+class FluiReadOnlyInput extends StatefulWidget {
   final String placeholder;
 
-  const CreateReadOnlyInput({super.key, required this.placeholder});
+  const FluiReadOnlyInput({super.key, required this.placeholder});
 
   @override
-  State<StatefulWidget> createState() => CreateReadOnlyInputState();
+  State<StatefulWidget> createState() => FluiReadOnlyInputState();
 }
 
-class CreateReadOnlyInputState extends State<CreateReadOnlyInput> {
+class FluiReadOnlyInputState extends State<FluiReadOnlyInput> {
   final inputController = TextEditingController();
 
   String getText() {

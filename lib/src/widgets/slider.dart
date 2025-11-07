@@ -24,9 +24,9 @@ import 'package:flutter/material.dart'
         ValueChanged,
         Widget;
 
-import 'text.dart' show CreateText;
+import 'text.dart' show FluiText;
 
-class CreateSlider extends StatefulWidget {
+class FluiSlider extends StatefulWidget {
   final String label;
   final double initialValue;
   final double minValue;
@@ -39,7 +39,7 @@ class CreateSlider extends StatefulWidget {
   final double borderRadius;
   final EdgeInsets padding;
 
-  const CreateSlider({
+  const FluiSlider({
     super.key,
     required this.label,
     required this.initialValue,
@@ -55,10 +55,10 @@ class CreateSlider extends StatefulWidget {
   });
 
   @override
-  State<CreateSlider> createState() => CreateSliderState();
+  State<FluiSlider> createState() => FluiSliderState();
 }
 
-class CreateSliderState extends State<CreateSlider> {
+class FluiSliderState extends State<FluiSlider> {
   late double _currentValue;
 
   @override
@@ -94,11 +94,11 @@ class CreateSliderState extends State<CreateSlider> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              CreateText(text: widget.label, fontSize: 14),
+              FluiText(text: widget.label, fontSize: 14),
               Container(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                child: CreateText(
+                child: FluiText(
                   text: _formatValue(_currentValue),
                   fontSize: 14,
                 ),
@@ -132,8 +132,8 @@ class CreateSliderState extends State<CreateSlider> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CreateText(text: _formatValue(widget.minValue), fontSize: 12),
-                CreateText(text: _formatValue(widget.maxValue), fontSize: 12),
+                FluiText(text: _formatValue(widget.minValue), fontSize: 12),
+                FluiText(text: _formatValue(widget.maxValue), fontSize: 12),
               ],
             ),
           ),

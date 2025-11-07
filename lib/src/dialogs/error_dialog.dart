@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart' show BuildContext, Navigator;
 
-import '../widgets/text_button.dart' show CreateTextButton;
+import '../widgets/text_button.dart' show FluiTextButton;
 import 'base_dialog.dart' show BaseDialog;
 
-class ErrorDialog extends BaseDialog {
-  const ErrorDialog({
+class FluiErrorDialog extends BaseDialog {
+  const FluiErrorDialog({
     super.key,
     required super.actions,
     required super.title,
@@ -17,7 +17,7 @@ class ErrorDialog extends BaseDialog {
       title: 'Error',
       content: content,
       actions: [
-        CreateTextButton(
+        FluiTextButton(
           text: 'Ok',
           onPressed: () => Navigator.of(context).pop(true),
         ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart'
     show AlertDialog, BuildContext, StatelessWidget, Widget, showDialog;
 
-import '../widgets/text.dart' show CreateText;
+import '../widgets/text.dart' show FluiText;
 
 class BaseDialog extends StatelessWidget {
   final String title;
@@ -18,9 +18,8 @@ class BaseDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: CreateText(text: title),
-      content:
-          content != null ? CreateText(text: content!, fontSize: 16) : null,
+      title: FluiText(text: title),
+      content: content != null ? FluiText(text: content!, fontSize: 16) : null,
       actions: actions,
     );
   }

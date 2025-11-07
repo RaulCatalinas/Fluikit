@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart'
     show BuildContext, Icon, IconButton, IconData, StatelessWidget, Widget;
 
-class CreateIconButton extends StatelessWidget {
+class FluiIconButton extends StatelessWidget {
   final void Function()? onPressed;
   final IconData icon;
   final String? tooltip;
   final double iconSize;
 
-  const CreateIconButton({
+  const FluiIconButton({
     super.key,
     this.iconSize = 65,
     this.tooltip,

@@ -8,12 +8,12 @@ import 'package:flutter/material.dart'
         Widget,
         EdgeInsets;
 
-class CreateDrawer extends StatelessWidget {
+class FluiDrawer extends StatelessWidget {
   final List<Widget> children;
   final double? height;
   final double? width;
 
-  const CreateDrawer({
+  const FluiDrawer({
     super.key,
     required this.children,
     this.height,

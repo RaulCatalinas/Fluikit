@@ -7,14 +7,14 @@ import 'package:flutter/material.dart'
         StatelessWidget,
         Widget;
 
-import 'text.dart' show CreateText;
+import 'text.dart' show FluiText;
 
-class CreateTextButton extends StatelessWidget {
+class FluiTextButton extends StatelessWidget {
   final void Function()? onPressed;
   final String text;
   final bool isOutlinedButton;
 
-  const CreateTextButton({
+  const FluiTextButton({
     super.key,
     this.isOutlinedButton = false,
     required this.text,
@@ -23,7 +23,7 @@ class CreateTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final commonChild = CreateText(text: text);
+    final commonChild = FluiText(text: text);
     final commonStyle = const ButtonStyle(enableFeedback: true);
 
     return isOutlinedButton
