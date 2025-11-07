@@ -41,6 +41,14 @@ class FluiDropdownState extends State<FluiDropdown> {
     });
   }
 
+  void closeIfOpen() {
+    if (isVisible) {
+      setState(() {
+        isVisible = false;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     if (!isVisible) {
