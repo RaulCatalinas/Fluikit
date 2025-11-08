@@ -42,11 +42,11 @@ class FluiDropdownState extends State<FluiDropdown> {
   }
 
   void closeIfOpen() {
-    if (isVisible) {
-      setState(() {
-        isVisible = false;
-      });
-    }
+    if (!isVisible) return;
+
+    setState(() {
+      isVisible = false;
+    });
   }
 
   @override
