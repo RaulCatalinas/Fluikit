@@ -8,3 +8,4 @@ export 'src/widgets/slider.dart';
 export 'src/widgets/stateful_icon_button.dart';
 export 'src/widgets/text.dart';
 export 'src/widgets/text_button.dart';
+export 'src/widgets/progress_bar.dart';
