@@ -78,13 +78,11 @@ class FluiSliderState extends State<FluiSlider> {
 
   @override
   Widget build(BuildContext context) {
-    final bgColor = widget.backgroundColor ?? Colors.grey.shade200;
-
     return Container(
       padding: widget.padding,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(widget.borderRadius),
-        color: bgColor,
+        color: widget.backgroundColor,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
