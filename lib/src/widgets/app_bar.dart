@@ -1,6 +1,5 @@
 import 'dart:ui' show Size;
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart'
     show
         AppBar,
@@ -10,7 +9,8 @@ import 'package:flutter/material.dart'
         Scaffold,
         StatelessWidget,
         Widget,
-        kToolbarHeight;
+        kToolbarHeight,
+        IconData;
 
 import 'icon_button.dart' show FluiIconButton;
 
